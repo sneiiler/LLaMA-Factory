@@ -1,0 +1,4 @@
+model_name_or_path: /mnt/data/kaifeng/models/qwen1_7B_lora_mv0623_dv0618
+template: qwen3
+infer_backend: huggingface  # choices: [huggingface, vllm, sglang]
+trust_remote_code: true
