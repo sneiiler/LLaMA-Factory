@@ -9,7 +9,7 @@
     "file_name": "alpaca_zh_demo.json"
   },
   "cluster_data": {
-    "file_name": "cluster_data.json",
+    "file_name": "distilled_training_data_v20250618_sharegpt_format_v1.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"

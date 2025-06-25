@@ -1,4 +1,4 @@
-model_name_or_path: saves/qwen3-1.7b/full/sft/
+model_name_or_path: /root/coder/LLaMA-Factory/saves/Qwen3-1.7B/full/sft
 template: qwen3
-infer_backend: huggingface  # choices: [huggingface, vllm, sglang]
+infer_backend: vllm  # choices: [huggingface, vllm, sglang]
 trust_remote_code: true
