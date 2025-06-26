@@ -486,7 +486,7 @@ huggingface-cli login
 ```bash
 git clone --depth 1 https://github.com/hiyouga/LLaMA-Factory.git
 cd LLaMA-Factory
-pip install -e ".[torch,metrics,deepspeed,eetq,vllm]" --no-build-isolation
+pip install -e ".[torch,metrics,deepspeed,eetq,vllm]" --no-build-isolation  -i https://mirrors.aliyun.com/pypi/simple
 ```
 
 可选的额外依赖项：torch、torch-npu、metrics、deepspeed、liger-kernel、bitsandbytes、hqq、eetq、gptq、aqlm、vllm、sglang、galore、apollo、badam、adam-mini、qwen、minicpm_v、modelscope、openmind、swanlab、dev
