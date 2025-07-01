@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /mnt/kaifeng/models/Qwen3-14B
+adapter_name_or_path: /root/LLaMA-Factory/saves/Qwen3-14B/lora/qwen3_sft_0701
+template: qwen3
+trust_remote_code: true
+
+### export
+export_dir: output/Qwen3-14B/lora/qwen3_sft_0701
+export_size: 5
+export_device: cpu  # choices: [cpu, auto]
+export_legacy_format: false
