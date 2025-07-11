@@ -8,10 +8,10 @@ do_train: true
 finetuning_type: lora
 lora_rank: 8
 lora_target: all
-# deepspeed: examples/deepspeed/ds_z3_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
+deepspeed: examples/deepspeed/ds_z3_config.json  # choices: [ds_z0_config.json, ds_z2_config.json, ds_z3_config.json]
 
 ### dataset
-dataset: identity,cluster_data
+dataset: afsim_data_doc_v1,distill_qwen_data_50k,afsim_data_code_v1
 template: qwen3
 cutoff_len: 5120
 max_samples: 100000
@@ -20,7 +20,7 @@ preprocessing_num_workers: 16
 dataloader_num_workers: 4
 
 ### output
-output_dir: saves/Qwen3-32B/lora/sft
+output_dir: saves/Qwen3-32B/lora/afsim_sft
 logging_steps: 10
 save_steps: 500
 plot_loss: true
@@ -29,9 +29,9 @@ save_only_model: false
 report_to: none  # choices: [none, wandb, tensorboard, swanlab, mlflow]
 
 ### train
-per_device_train_batch_size: 1
+per_device_train_batch_size: 2
 gradient_accumulation_steps: 2
-learning_rate: 7.0e-5
+learning_rate: 9.0e-6
 num_train_epochs: 2.0
 lr_scheduler_type: cosine
 warmup_ratio: 0.1

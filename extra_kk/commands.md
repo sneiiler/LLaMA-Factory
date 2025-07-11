@@ -6,6 +6,9 @@
 `PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
 llamafactory-cli train examples/train_full/train_qwen3_14B_full_sft.yaml`
 
+`PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+llamafactory-cli train examples/train_lora/qwen3_32B_lora_sft_afsim.yaml`
+
 
 # 推理
 CUDA_VISIBLE_DEVICES=0 llamafactory-cli chat examples/inference/qwen3_1.7B_full_sft.yaml
