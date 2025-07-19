@@ -2,6 +2,9 @@
   "identity": {
     "file_name": "identity.json"
   },
+  "identity_afsim": {
+    "file_name": "identity_afsim.json"
+  },
   "alpaca_en_demo": {
     "file_name": "alpaca_en_demo.json"
   },
@@ -44,8 +47,8 @@
       "system_tag": "system"
     }
   },
-  "omni_thought_5k": {
-    "file_name": "/mnt/saves-wu-nas/shifan/kaifeng/datasets/OmniThought-0528/OmniThought-R1-0528_sharegpt_5k.jsonl",
+  "omni_thought_10k_cd7": {
+    "file_name": "/mnt/saves-wu-nas/shifan/kaifeng/datasets/private/omnithought_sharegpt_cd7_random_10k.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -59,7 +62,21 @@
     }
   },
   "afsim_data_code_v1": {
-    "file_name": "/root/code/afsim_llm/data/cleaned_data/qa_code_with_answers_Qwen3-32B_20250709_210333_v1_sharegpt_clean.json",
+    "file_name": "/root/code/afsim_llm/data/training_data/qa_answer_to_code_v1_sharegpt_3k.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
+  "afsim_data_code_v1_1": {
+    "file_name": "/root/code/afsim_llm/data/training_data/qa_answer_to_code_v1.1_dsp_sharegpt_114.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -73,7 +90,21 @@
     }
   },
   "afsim_data_doc_v1": {
-    "file_name": "/root/code/afsim_llm/data/cleaned_data/qa_with_answers_Qwen3-32B_20250708_210812_v1_sharegpt_clean.json",
+    "file_name": "/root/code/afsim_llm/data/training_data/qa_based_on_documentation_v1_sharegpt_9k.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
+  "afsim_code_explain_v1": {
+    "file_name": "/root/code/afsim_llm/data/training_data/qa_code_explain_v1_sharegpt_3k.jsonl",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
