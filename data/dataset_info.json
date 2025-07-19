@@ -44,8 +44,22 @@
       "system_tag": "system"
     }
   },
+  "omni_thought_5k": {
+    "file_name": "/mnt/saves-wu-nas/shifan/kaifeng/datasets/OmniThought-0528/OmniThought-R1-0528_sharegpt_5k.jsonl",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
   "afsim_data_code_v1": {
-    "file_name": "qa_code_with_answers_Qwen3-32B_20250709_210333_v1_sharegpt_clean.json",
+    "file_name": "/root/code/afsim_llm/data/cleaned_data/qa_code_with_answers_Qwen3-32B_20250709_210333_v1_sharegpt_clean.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -59,7 +73,7 @@
     }
   },
   "afsim_data_doc_v1": {
-    "file_name": "qa_with_answers_Qwen3-32B_20250708_210812_v1_sharegpt_clean.json",
+    "file_name": "/root/code/afsim_llm/data/cleaned_data/qa_with_answers_Qwen3-32B_20250708_210812_v1_sharegpt_clean.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -74,6 +88,9 @@
   },
   "distill_qwen_data_50k": {
     "file_name": "/mnt/saves-wu-nas/shifan/kaifeng/DistilQwen_100k/distil_qwen_50k_subset.json"
+  },
+  "distill_qwen_data_5k": {
+    "file_name": "/mnt/saves-wu-nas/shifan/kaifeng/datasets/DistillQwen_100k/distill_qwen_5k_subset.json"
   },
   "glaive_toolcall_zh_demo": {
     "file_name": "glaive_toolcall_zh_demo.json",

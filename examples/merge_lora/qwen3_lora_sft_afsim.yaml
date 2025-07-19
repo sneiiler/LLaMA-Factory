@@ -1,0 +1,13 @@
+### Note: DO NOT use quantized model or quantization_bit when merging lora adapters
+
+### model
+model_name_or_path: /mnt/saves-wu-nas/shifan/kaifeng/models/DistillQwen-ThoughtY-32B
+adapter_name_or_path: saves/DistillQwen-ThoughtY-32B/lora/afsim_sft_0714
+template: qwen
+trust_remote_code: true
+
+### export
+export_dir: /mnt/saves-wu-nas/shifan/kaifeng/models/DistillQwen-ThoughtY-32B/afsim_sft_0714
+export_size: 5
+export_device: cpu  # choices: [cpu, auto]
+export_legacy_format: false
