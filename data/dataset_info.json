@@ -48,7 +48,35 @@
     }
   },
   "omni_thought_10k_cd7": {
-    "file_name": "/mnt/saves-wu-nas/shifan/kaifeng/datasets/private/omnithought_sharegpt_cd7_random_10k.jsonl",
+    "file_name": "/mnt/saves-wu-nas/shifan/kaifeng/datasets/private/omnithought_cd7_random_10k/omnithought_sharegpt_cd7_random_10k.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
+  "omni_thought_10k_cd56": {
+    "file_name": "/mnt/saves-wu-nas/shifan/kaifeng/datasets/private/omnithought_sharegpt_10k_cd5-6.json",
+    "formatting": "sharegpt",
+    "columns": {
+      "messages": "messages"
+    },
+    "tags": {
+      "role_tag": "role",
+      "content_tag": "content",
+      "user_tag": "user",
+      "assistant_tag": "assistant",
+      "system_tag": "system"
+    }
+  },
+  "omni_thought_5k_cd56": {
+    "file_name": "/mnt/saves-wu-nas/shifan/kaifeng/datasets/private/omnithought_sharegpt_5k_cd5-6.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -62,7 +90,7 @@
     }
   },
   "afsim_data_code_v1": {
-    "file_name": "/root/code/afsim_llm/data/training_data/qa_answer_to_code_v1_sharegpt_3k.jsonl",
+    "file_name": "/root/code/afsim_llm/data/training_data/qa_answer_to_code_v1_sharegpt_3k.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -76,7 +104,7 @@
     }
   },
   "afsim_data_code_v1_1": {
-    "file_name": "/root/code/afsim_llm/data/training_data/qa_answer_to_code_v1.1_dsp_sharegpt_114.jsonl",
+    "file_name": "/root/code/afsim_llm/data/training_data/qa_answer_to_code_v1.1_dsp_sharegpt_114.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -90,7 +118,7 @@
     }
   },
   "afsim_data_doc_v1": {
-    "file_name": "/root/code/afsim_llm/data/training_data/qa_based_on_documentation_v1_sharegpt_9k.jsonl",
+    "file_name": "/root/code/afsim_llm/data/training_data/qa_based_on_documentation_v1_sharegpt_9k.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"
@@ -104,7 +132,7 @@
     }
   },
   "afsim_code_explain_v1": {
-    "file_name": "/root/code/afsim_llm/data/training_data/qa_code_explain_v1_sharegpt_3k.jsonl",
+    "file_name": "/root/code/afsim_llm/data/training_data/qa_code_explain_v1_sharegpt_3k.json",
     "formatting": "sharegpt",
     "columns": {
       "messages": "messages"

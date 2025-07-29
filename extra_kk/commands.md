@@ -12,6 +12,9 @@ llamafactory-cli train examples/train_full/train_qwen3_14B_full_sft_afsim.yaml
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
 llamafactory-cli train examples/train_lora/qwen3_32B_lora_sft_afsim.yaml
 
+PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True \
+llamafactory-cli train examples/train_full/train_qwen3_8B_full_sft_afsim.yaml
+
 
 
 # 推理
@@ -35,6 +38,13 @@ pkill -15 -f 'llamafactory'
 CUDA_VISIBLE_DEVICES=1,2,3 vllm serve /mnt/saves-wu-nas/shifan/kaifeng/models/DistillQwen-ThoughtY-32B/afsim_sft_0714 --max-model-len 32768 --tensor-parallel-size 4 --gpu-memory-utilization 0.9  --host 0.0.0.0 --port 11400 --api-key sk-123456 --served-model-name afsim-qwen-32b
 
 vllm serve /mnt/saves-wu-nas/shifan/kaifeng/models/DistillQwen-ThoughtY-32B/afsim_sft_0714 --max-model-len 32768 --tensor-parallel-size 3 --gpu-memory-utilization 0.9  --host 0.0.0.0 --port 11400 --api-key sk-123456 --served-model-name afsim32b
+
+vllm serve /mnt/saves-wu-nas/shifan/kaifeng/models/DistillQwen-ThoughtY-32B/afsim_sft_0719 --max-model-len 32768 --tensor-parallel-size 2 --gpu-memory-utilization 0.8  --host 0.0.0.0 --port 11400 --api-key sk-123456 --served-model-name afsim-32b-0719
+
+vllm serve /mnt/saves-wu-nas/shifan/kaifeng/models/Qwen3-32B --max-model-len 32768 --tensor-parallel-size 4  --gpu-memory-utilization 0.75  --host 0.0.0.0 --port 11400 --api-key sk-123456 --served-model-name qwen3-32b
+
+## for 53开发机
+CUDA_VISIBLE_DEVICES=0 vllm serve /mnt/ht_g3/saves-wu-nas/shifan/kaifeng/models/Qwen3-8B --max-model-len 32768 --tensor-parallel-size 1 --gpu-memory-utilization 0.9  --host 0.0.0.0 --port 8256 --api-key sk-123456 --served-model-name qwen-8b
 
 ---
 # evalscope 
