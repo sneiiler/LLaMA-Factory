@@ -29,6 +29,10 @@ llamafactory-cli export /root/code/Llama-Factory/examples/merge_lora/qwen3_lora_
 # llamafactory 训练完以后显存占用异常
 pkill -15 -f 'llamafactory'
 
+# vllm显存占用异常
+ps aux | grep vllm
+kill -9 <id>
+
 # VLLM后端
 `pip install vllm -i https://mirrors.aliyun.com/pypi/simple`
 如果提示没有gcc，请安装gcc
@@ -44,6 +48,13 @@ vllm serve /mnt/saves-wu-nas/shifan/kaifeng/models/DistillQwen-ThoughtY-32B/afsi
 vllm serve /mnt/saves-wu-nas/shifan/kaifeng/models/Qwen3-32B --max-model-len 32768 --tensor-parallel-size 4  --gpu-memory-utilization 0.75  --host 0.0.0.0 --port 11400 --api-key sk-123456 --served-model-name qwen3-32b
 
 vllm serve /root/code/Llama-Factory/saves/Qwen3-8B/full/sft_0728_afsim --max-model-len 32768 --tensor-parallel-size 4  --gpu-memory-utilization 0.75  --host 0.0.0.0 --port 11400 --api-key sk-123456 --served-model-name afsim8b
+
+vllm serve /mnt/wunas/default/kaifeng/models/afsim-14B-0811 --max-model-len 32768 --tensor-parallel-size 2  --gpu-memory-utilization 0.75  --host 0.0.0.0 --port 11400 --api-key sk-123456 --served-model-name afsim-14b
+
+
+vllm serve /mnt/wunas/default/kaifeng/models/Qwen3-32B --max-model-len 131072 --tensor-parallel-size 2  --gpu-memory-utilization 0.75  --host 0.0.0.0 --port 11400 --api-key sk-123456 --served-model-name Qwen3-32B
+
+vllm serve /mnt/wunas/default/kaifeng/models/Qwen3-30B-A3B-Thinking-2507 --max-model-len 131072  --tensor-parallel-size 2   --reasoning-parser deepseek_r1 --api-key sk-123456 --host 0.0.0.0 --port 11400  --served-model-name Qwen3-30B-A3B-Thinking-2507
 
 ## for 53开发机
 CUDA_VISIBLE_DEVICES=0 vllm serve /mnt/ht_g3/saves-wu-nas/shifan/kaifeng/models/Qwen3-8B --max-model-len 32768 --tensor-parallel-size 1 --gpu-memory-utilization 0.9  --host 0.0.0.0 --port 8256 --api-key sk-123456 --served-model-name qwen-8b
